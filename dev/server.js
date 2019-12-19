@@ -53674,7 +53674,7 @@ const express = __webpack_require__(/*! express */ "./node_modules/express/index
       bodyParser = __webpack_require__(/*! body-parser */ "./node_modules/body-parser/index.js"),
       cors = __webpack_require__(/*! cors */ "./node_modules/cors/lib/index.js"),
       http = __webpack_require__(/*! http */ "http"),
-      port = 10002,
+      port = 80,
       app = express(),
       router = express.Router();
 
@@ -53722,8 +53722,7 @@ const request = __webpack_require__(/*! request */ "./node_modules/request/index
 
 module.exports = app => {
   app.get('/wechat', (req, res, next) => {
-    console.log('ip: ' + req.ip);
-    res.status(200).send('this is wechat');
+    res.status(200).send('ip: ' + req.ip);
   });
 };
 
