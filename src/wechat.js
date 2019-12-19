@@ -4,8 +4,6 @@ const request = require('request'),
 
 module.exports = (app) => {
   app.get('/wechat', (req, res, next) => {
-    console.log('ip: ' + req.ip)
-
-    res.status(200).send('this is wechat')
+    res.status(200).send('ip: ' + req.ip)
   })
 }
