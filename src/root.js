@@ -3,7 +3,7 @@ const express = require('express'),
   bodyParser = require('body-parser'),
   cors = require('cors'),
   http = require('http'),
-  port = 10002,
+  port = 80,
   app = express(),
   router = express.Router()
 
