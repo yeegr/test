@@ -3,7 +3,7 @@ const express = require('express'),
   bodyParser = require('body-parser'),
   cors = require('cors'),
   http = require('http'),
-  port = 80,
+  port = 10001,
   app = express(),
   router = express.Router()
 
@@ -17,7 +17,8 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(cors())
 
-const wechat = require('./wechat')(app)
+const wechat = require('./wechat')(app),
+  wechat_notify = require('./wechat_notify')(app)
 
 router.use((req, res, next) => {
   next()
