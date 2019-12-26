@@ -54040,6 +54040,8 @@ module.exports = app => {
       method: 'POST',
       body: WXPAY.buildXML(WXPAY.buildOptions('114.243.34.99' || false, 1))
     };
+    console.log('before sending to wechat');
+    console.log(options.body);
     sendToWeChat(options, (err, data) => {
       if (!err) {
         res.status(200).send(data);
@@ -54053,6 +54055,7 @@ module.exports = app => {
 function sendToWeChat(options, callback) {
   request(options, (err, res, body) => {
     if (!err && res.statusCode === 200) {
+      console.log('after sending to wechat');
       console.log(body); // let result = JSON.stringify(JSON.parse(body))
 
       return callback(null, body);
@@ -54152,6 +54155,7 @@ const WXPAY = {
 
 module.exports = app => {
   app.get('/wechat/notify', (req, res, next) => {
+    console.log('notifying');
     console.log(req.body.xml);
   });
 };
