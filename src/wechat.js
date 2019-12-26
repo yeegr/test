@@ -11,7 +11,7 @@ module.exports = (app) => {
       body: WXPAY.buildXML(WXPAY.buildOptions('114.243.34.99' || req.ip, 1))
     }
 
-    console.log('before sending to wechat')
+    console.log('发送信息')
     console.log(options.body)
 
     sendToWeChat(options, (err, data) => {
@@ -27,10 +27,9 @@ module.exports = (app) => {
 function sendToWeChat(options, callback) {
   request(options, (err, res, body) => {
     if (!err && res.statusCode === 200) {
-      console.log('after sending to wechat')
+      console.log('微信回复：')
       console.log(body)
 
-      // let result = JSON.stringify(JSON.parse(body))
       return callback(null, body)
     } else {
       return callback(err, null)
@@ -113,6 +112,7 @@ const WXPAY = {
       spbill_create_ip: ip,
       total_fee: total,
       trade_type: this.TRADE_TYPE,
+      notify_url: this.NOTIFY_URL
     }
 
     opts.sign = this.signString(this.obj2str(opts) + '&key=' + this.APP_SECRET)
