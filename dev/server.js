@@ -54067,7 +54067,7 @@ function sendToWeChat(options, callback) {
 
 const WXPAY = {
   APP_ID: 'wx63ebcb09dd2f6e6a',
-  APP_SECRET: 'b79de5d436fbdd9585101013319cd91f',
+  APP_SECRET: 'Woailexuexizaixianyingyujiaoyu20',
   MCH_ID: '1436091002',
   BODY: '微信测试支付',
   SCENE_INFO: '{"h5_info":{"type":"Wap","wap_url":"https://39.97.182.211/","wap_name":"微信支付测试"}}',
