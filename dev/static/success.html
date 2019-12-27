@@ -11,25 +11,37 @@ body {
 }
 
 .wrapper {
-  background-image: url('z.png');
-  background-repeat: no-repeat;
-  background-position: center 25%;
-  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   height: 100%;
+  position: absolute;
   width: 100%;
 }
 
-h2 {
-  margin: 0 auto;
+.inner {
+  height: auto;
+  max-width: 600px;
   position: relative;
+  margin-top: -10em;
+}
+
+img {
+  display: block;
+}
+
+h2 {
   text-align: center;
-  top: 55%;
 }
 </style>
   </head>
   <body>
     <div class="wrapper">
-      <h2>支付成功</h2>
+      <div class="inner">
+        <img src="z.png" />
+        <h2>支付成功</h2>
+      </div>
     </div>
   </body>
 </html>
