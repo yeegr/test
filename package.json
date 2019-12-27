@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack && node ./dev/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./dev/server.js",
+    "test": "webpack && npm start"
   },
   "repository": {
     "type": "git",
@@ -26,11 +26,13 @@
     "http": "0.0.0",
     "md5": "^2.2.1",
     "path": "^0.12.7",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "xml2js": "^0.4.23"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "babel-loader": "^8.0.6",
+    "file-loader": "^5.0.2",
     "morgan": "^1.9.1",
     "webpack": "^4.41.3",
     "webpack-cli": "^3.3.10"

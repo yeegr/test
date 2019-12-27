@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>乐学习英语名师精品英语全能专项小班课，59元特惠大礼包！</title>
+    <style>
+body {
+  margin: 0;
+  padding: 3em;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  box-shadow: 0 2px 15px #ccc;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.hero {
+  display: block;
+  width: 100%;
+}
+
+form {
+  box-sizing: border-box;
+  padding: 1em;
+  width: 100%;
+}
+
+fieldset {
+  border-width: 0;
+  margin: 0 0 .5em 0;
+}
+
+label {
+  display: block;
+  margin-bottom: .2em;
+}
+
+label > span {
+  color: red;
+  margin-left: .2em;
+}
+
+input {
+  border: 1px solid #ccc;
+  border-radius: .3em;
+  box-sizing: border-box;
+  font-size: 1em;
+  padding: 1em;
+  outline: none;
+  width: 100%;
+}
+
+.box {
+  border: 1px solid #ccc;
+  border-radius: .3em;
+  display: flex;
+  flex-direction: row;
+  padding: .5em 1em;
+}
+
+.box .input {
+  width: 2em;
+}
+
+.box [type="radio"] {
+  display: none;
+}
+
+.box .input::before {
+  background-color: #fff;
+  border-radius: 50%;
+  border: .5em solid #52C018;
+  content: "";
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  height: .5em;
+  width: .5em;
+}
+
+.box label {
+  cursor: pointer;
+  flex: 1;
+}
+
+.box .header {
+  color: #f0a000;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.box .footer {
+  color: #888;
+  font-size: .9em;
+  margin-top: .2em;
+}
+
+input.error {
+  background-color: red;
+}
+
+.action {
+  margin-bottom: 2em;
+  padding: 5em;
+  text-align: center;
+}
+
+.action button {
+  background-color: #52C018;
+  border: 1px solid #4CB116;
+  border-radius: .2em;
+  color: #fff;
+  font-size: 1.2em;
+  padding: .5em;
+  width: 20em;
+}
+
+.contact {
+  padding: 2em 1em 5em 1em;
+}
+
+.contact div {
+  border-bottom: 1px solid #ccc;
+  padding: 1em;
+}
+
+.icon {
+  background-image: url('http://newcdn.96weixin.com/mmbiz.qlogo.cn/mmbiz/yqVAqoZvDibHEFFibGar5Ie3UZoyH7aiarlj6icdxkAbBCOuIN5h66OPgOpXFGztX44qEicX2tBgjaR4fXxbccwTLxg/0');
+  background-repeat: no-repeat;
+  background-position-x: 0;
+  display: inline-block;
+  height: 1.5em;
+  width: 1.5em;
+  position: relative;
+  top: .25em;
+}
+
+.tel {
+  color: 
+}
+    </style>
+  </head>
+  <body>
+    <section class="wrapper">
+      <img class="hero" src="1.jpg">
+      <form name="payForm" onsubmit="event.preventDefault(); validateForm();">
+        <fieldset>
+          <label>学生姓名<span>*</span></label>
+          <input type="text" name="name" onblur="resetName()" value="stone" />
+        </fieldset>
+        <fieldset>
+          <label>年级<span>*</span></label>
+          <input type="number" name="grade" onblur="resetGrade()" value="1" />
+        </fieldset>
+        <fieldset>
+          <label>手机<span>*</span></label>
+          <input type="tel" name="mobile" onblur="resetMobile()" value="13911111111" />
+        </fieldset>
+        <fieldset>
+          <label>支付报名费，开始你的学习吧~</label>
+          <div class="box">
+            <div class="input">
+              <input type="radio" name="price" checked />
+            </div>
+            <label for="price">
+              <div class="header">￥59.00</div>
+              <div class="footer">
+                &nbsp;2节2V6名师课+1节1V6课后专属辅导+2节全能专项课+1节1V1课后评课+150元学习大礼包
+              </div>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="action">
+          <button>微信支付（￥59.00）</button>
+        </fieldset>
+      </form>
+      <img class="hero" src="2.jpg">
+      <img class="hero" src="3.jpg">
+      <img class="hero" src="4.jpg">
+      <img class="hero" src="5.jpg">
+      <img class="hero" src="6.jpg">
+      <div class="contact">
+        <h3>联系我们</h3>
+        <div>
+          <span class="icon" style="background-position-y: -136px;"></span>
+          <span>客服：</span>
+          <a><a href="tel:4009010696">4009010696</a></span>
+        </div>
+        <div>
+          <span class="icon" style="background-position-y: -136px;"></span>
+          <span>电话：</span>
+          <span><a href="tel:17801720975">17801720975</a></span>
+        </div>
+        <div>
+          <span class="icon" style="background-position-y: -31px;"></span>
+          <span>官网：</span>
+          <span><a href="http://www.lxx100.com">www.lxx100.com</a></span>
+        </div>
+      </section>
+    </div>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('input').forEach((input) => {
+    input.addEventListener('focus', () => {
+      input.className = ''
+    })
+  })
+})
+
+var form = document.forms.payForm,
+  nameInput = form.elements.name,
+  gradeInput = form.elements.grade,
+  mobileInput = form.elements.mobile,
+  mobileRegex = RegExp(/^1[3456789]\d{9}$/)
+
+function getName() {
+  return nameInput.value.toString().trim()
+}
+
+function validateName() {
+  return getName().length > 1
+}
+
+function resetName() {
+  if (!validateName()) {
+    nameInput.value = ''
+    nameInput.className = 'error'
+    return false
+  }
+
+  return true
+}
+
+function getGrade() {
+  return parseInt(gradeInput.value.toString().trim(), 10)
+}
+
+function validateGrade() {
+  let grade = getGrade()
+  return (grade > 0 && grade < 13)
+}
+
+function resetGrade() {
+  if (!validateGrade()) {
+    gradeInput.value = ''
+    gradeInput.className = 'error'
+    return false
+  }
+
+  return true
+}
+
+function getMobile() {
+  return mobileInput.value.toString().trim()
+}
+
+function validateMobile() {
+  return mobileRegex.test(getMobile())
+}
+
+function resetMobile() {
+  if (!validateMobile()) {
+    mobileInput.value = ''
+    mobileInput.className = 'error'
+    return false
+  }
+
+  return true
+}
+
+function validateForm() {
+  if (resetName() && resetGrade() && resetMobile()) {
+    submit(getName(), getGrade(), getMobile())
+  }
+
+  return false
+}
+
+function submit(name, grade, mobile) {
+  let xhr = new XMLHttpRequest()
+  
+  xhr.onload = () => {
+    if (xhr.status >= 200 && xhr.status < 300) {
+      console.log('success!', xhr)
+    } else {
+      console.log('failed!')
+    }
+  }
+
+  xhr.open('POST', 'http://localhost:10001/wechat')
+  xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
+  xhr.send(JSON.stringify({
+    name,
+    grade,
+    mobile
+  }))
+}
+    </script>
+  </body>
+</html>

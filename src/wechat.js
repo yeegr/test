@@ -1,24 +1,39 @@
 const request = require('request'),
   fs = require('fs'),
   path = require('path'),
-  md5 = require('md5')
+  md5 = require('md5'),
+  xmlParser = require('xml2js').parseString
 
 module.exports = (app) => {
-  app.get('/wechat', (req, res, next) => {
+  app.post('/wechat', (req, res, next) => {
     let options = {
       url: WXPAY.URL,
       method: 'POST',
-      body: WXPAY.buildXML(WXPAY.buildOptions('114.243.34.99' || req.ip, 1))
+      body: WXPAY.buildXML(WXPAY.buildOptions(
+        req.ip || '114.243.34.99',
+        1,
+        {
+          "campaign": "乐学习英语名师精品英语全能专项小班课，59元特惠大礼包",
+          "platform": "多点",
+          "name": req.body.name,
+          "grade": req.body.grade,
+          "mobile": req.body.mobile
+        }
+      ))
     }
 
-    console.log('发送信息')
-    console.log(options.body)
+    // console.log('发送信息')
+    // console.log(options.body)
 
     sendToWeChat(options, (err, data) => {
       if (!err) {
-        res.status(200).send(data)
+        xmlParser(data, {explicitArray : false}, (error, result) => {
+          res.status(200).send(result.xml)
+        })
       } else {
-        res.status(500).send(err)
+        xmlParser(err, {explicitArray : false}, (error, result) => {
+          res.status(500).send(result.xml)
+        })
       }
     })
   })
@@ -27,9 +42,6 @@ module.exports = (app) => {
 function sendToWeChat(options, callback) {
   request(options, (err, res, body) => {
     if (!err && res.statusCode === 200) {
-      console.log('微信回复：')
-      console.log(body)
-
       return callback(null, body)
     } else {
       return callback(err, null)
@@ -41,10 +53,11 @@ const WXPAY = {
   APP_ID: 'wx63ebcb09dd2f6e6a',
   APP_SECRET: 'Woailexuexizaixianyingyujiaoyu20',
   MCH_ID: '1436091002',
-  BODY: '微信测试支付',
-  SCENE_INFO: '{"h5_info":{"type":"Wap","wap_url":"https://39.97.182.211/","wap_name":"微信支付测试"}}',
-  URL: 'https://api.mch.weixin.qq.com/pay/unifiedorder',
+  BODY: '乐学习微信H5支付测试',
+  SCENE_INFO: '{"h5_info":{"type":"Wap","wap_url":"https://39.97.182.211/","wap_name":"乐学习"}}',
   NOTIFY_URL: 'https://39.97.182.211/wechat/notify',
+
+  URL: 'https://api.mch.weixin.qq.com/pay/unifiedorder',
   DEVICE_INFO: 'WEB',
   TRADE_TYPE: 'MWEB',
 
@@ -101,11 +114,12 @@ const WXPAY = {
     return md5(str).toUpperCase()
   },
 
-  buildOptions: function(ip, total) {
+  buildOptions: function(ip, total, detail) {
     let opts = {
       appid: this.APP_ID,
       mch_id: this.MCH_ID,
       body: this.BODY,
+      detail: detail,
       scene_info: this.SCENE_INFO,
       nonce_str: this.getNonceStr(),
       out_trade_no: this.getTimestamp(),

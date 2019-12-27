@@ -16,6 +16,16 @@ module.exports = {
         test: /\.js$/i,
         use: 'babel-loader',
         exclude: /node-modules/
+      },
+      {
+        test: /\.(html|jpg)$/i,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: 'static/[name].[ext]'
+          }
+        }],
+        exclude: /node_modules/
       }
     ]
   }
