@@ -7,7 +7,7 @@
     <style>
 body {
   margin: 0;
-  padding: 3em;
+  padding: 1em;
   font-family: sans-serif;
 }
 
@@ -104,7 +104,7 @@ input.error {
 
 .action {
   margin-bottom: 2em;
-  padding: 5em;
+  padding: 5em 1em;
   text-align: center;
 }
 
@@ -114,8 +114,8 @@ input.error {
   border-radius: .2em;
   color: #fff;
   font-size: 1.2em;
-  padding: .5em;
-  width: 20em;
+  padding: .5em 2em;
+  white-space: nowrap;
 }
 
 .contact {
@@ -284,7 +284,9 @@ function submit(name, grade, mobile) {
   
   xhr.onload = () => {
     if (xhr.status >= 200 && xhr.status < 300) {
-      console.log('success!', xhr)
+      let json = JSON.parse(xhr.responseText)
+      console.log(json)
+      window.location.href = json.mweb_url
     } else {
       console.log('failed!')
     }
