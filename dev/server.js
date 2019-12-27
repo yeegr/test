@@ -61421,6 +61421,19 @@ module.exports = function (module) {
 
 /***/ }),
 
+/***/ "./src/0.jpg":
+/*!*******************!*\
+  !*** ./src/0.jpg ***!
+  \*******************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "static/0.jpg");
+
+/***/ }),
+
 /***/ "./src/1.jpg":
 /*!*******************!*\
   !*** ./src/1.jpg ***!
@@ -61522,12 +61535,14 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(__dirname) {/* harmony import */ var _index_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.html */ "./src/index.html");
-/* harmony import */ var _1_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./1.jpg */ "./src/1.jpg");
-/* harmony import */ var _2_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./2.jpg */ "./src/2.jpg");
-/* harmony import */ var _3_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./3.jpg */ "./src/3.jpg");
-/* harmony import */ var _4_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./4.jpg */ "./src/4.jpg");
-/* harmony import */ var _5_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./5.jpg */ "./src/5.jpg");
-/* harmony import */ var _6_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./6.jpg */ "./src/6.jpg");
+/* harmony import */ var _0_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./0.jpg */ "./src/0.jpg");
+/* harmony import */ var _1_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./1.jpg */ "./src/1.jpg");
+/* harmony import */ var _2_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./2.jpg */ "./src/2.jpg");
+/* harmony import */ var _3_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./3.jpg */ "./src/3.jpg");
+/* harmony import */ var _4_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./4.jpg */ "./src/4.jpg");
+/* harmony import */ var _5_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./5.jpg */ "./src/5.jpg");
+/* harmony import */ var _6_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./6.jpg */ "./src/6.jpg");
+
 
 
 
