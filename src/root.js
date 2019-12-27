@@ -6,6 +6,8 @@ import i3 from './3.jpg'
 import i4 from './4.jpg'
 import i5 from './5.jpg'
 import i6 from './6.jpg'
+import success from './success.html'
+import z from './z.png'
 
 const express = require('express'),
   logger = require('morgan'),

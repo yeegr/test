@@ -61542,6 +61542,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _4_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./4.jpg */ "./src/4.jpg");
 /* harmony import */ var _5_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./5.jpg */ "./src/5.jpg");
 /* harmony import */ var _6_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./6.jpg */ "./src/6.jpg");
+/* harmony import */ var _success_html__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./success.html */ "./src/success.html");
+/* harmony import */ var _z_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./z.png */ "./src/z.png");
+
+
 
 
 
@@ -61598,6 +61602,19 @@ server.timeout = 1000 * 60 * 30; // console.log('Environmental variables: ', pro
 console.log('Server running on port ' + port);
 console.log('=====================================');
 /* WEBPACK VAR INJECTION */}.call(this, "/"))
+
+/***/ }),
+
+/***/ "./src/success.html":
+/*!**************************!*\
+  !*** ./src/success.html ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "static/success.html");
 
 /***/ }),
 
@@ -61753,6 +61770,19 @@ module.exports = app => {
     console.log(req.body.xml);
   });
 };
+
+/***/ }),
+
+/***/ "./src/z.png":
+/*!*******************!*\
+  !*** ./src/z.png ***!
+  \*******************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "static/z.png");
 
 /***/ }),
 
