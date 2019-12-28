@@ -10,8 +10,8 @@ module.exports = (app) => {
       url: WXPAY.URL,
       method: 'POST',
       body: WXPAY.buildXML(WXPAY.buildOptions(
-        req.ip || '114.243.34.99',
-        1,
+        req.ip,
+        5900,
         {
           "campaign": "乐学习英语名师精品英语全能专项小班课，59元特惠大礼包",
           "platform": "多点",
