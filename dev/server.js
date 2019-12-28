@@ -61635,7 +61635,7 @@ module.exports = app => {
     let options = {
       url: WXPAY.URL,
       method: 'POST',
-      body: WXPAY.buildXML(WXPAY.buildOptions(req.ip, 5900, {
+      body: WXPAY.buildXML(WXPAY.buildOptions(req.ip, 1, {
         "campaign": "乐学习英语名师精品英语全能专项小班课，59元特惠大礼包",
         "platform": "多点",
         "name": req.body.name,

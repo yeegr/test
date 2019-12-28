@@ -280,12 +280,11 @@ function submit(name, grade, mobile) {
   let xhr = new XMLHttpRequest()
   
   xhr.onload = () => {
+    let json = JSON.parse(xhr.responseText)
+    console.log(json)
+
     if (xhr.status >= 200 && xhr.status < 300) {
-      let json = JSON.parse(xhr.responseText)
-      console.log(json)
-      window.location.href = json.mweb_url + '&redirect_url=http://h5.lxx100.com/success.html'
-    } else {
-      console.log('failed!')
+      window.location.href = json.mweb_url + '&redirect_url=http%3A%2F%2Fwww.lxx100.com'
     }
   }
 
