@@ -30,8 +30,7 @@ app.use(cors())
 
 app.use(express.static('./dev/static'))
 
-const wechat = require('./wechat')(app),
-  wechat_notify = require('./wechat_notify')(app)
+const wechat = require('./wechat')(app)
 
 router.use((req, res, next) => {
   next()

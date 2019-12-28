@@ -61575,8 +61575,7 @@ app.use(bodyParser.urlencoded({
 app.use(cors());
 app.use(express.static('./dev/static'));
 
-const wechat = __webpack_require__(/*! ./wechat */ "./src/wechat.js")(app),
-      wechat_notify = __webpack_require__(/*! ./wechat_notify */ "./src/wechat_notify.js")(app);
+const wechat = __webpack_require__(/*! ./wechat */ "./src/wechat.js")(app);
 
 router.use((req, res, next) => {
   next();
@@ -61753,22 +61752,6 @@ const WXPAY = {
     xml += '</xml>';
     return xml;
   }
-};
-
-/***/ }),
-
-/***/ "./src/wechat_notify.js":
-/*!******************************!*\
-  !*** ./src/wechat_notify.js ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = app => {
-  app.get('/wechat/notify', (req, res, next) => {
-    console.log('notifying');
-    console.log(req.body.xml);
-  });
 };
 
 /***/ }),
