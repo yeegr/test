@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "forever ./dev/server.js",
-    "test": "webpack && npm start"
+    "start": "forever start ./dev/server.js",
+    "test": "webpack && node ./dev/server.js"
   },
   "repository": {
     "type": "git",
