@@ -53,7 +53,7 @@ const WXPAY = {
   APP_ID: 'wx63ebcb09dd2f6e6a',
   APP_SECRET: 'Woailexuexizaixianyingyujiaoyu20',
   MCH_ID: '1436091002',
-  BODY: '乐学习微信H5支付测试',
+  BODY: '乐学习英语名师精品英语全能专项小班课',
   SCENE_INFO: '{"h5_info":{"type":"Wap","wap_url":"https://39.97.182.211/","wap_name":"乐学习"}}',
   NOTIFY_URL: 'https://39.97.182.211/wechat/notify',
 
